@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://chyjehojwac54"]
+
+[ext_resource type="PackedScene" uid="uid://coe66y3yd30ne" path="res://Background.tscn" id="1_6okig"]
+[ext_resource type="PackedScene" uid="uid://bx2elam5ejm3b" path="res://Logo.tscn" id="2_giquc"]
+[ext_resource type="PackedScene" uid="uid://cwms1d6pv36ct" path="res://Spaceship.tscn" id="3_wc5jd"]
+
+[node name="LoadingScreen" type="Node2D"]
+
+[node name="Icon" parent="." instance=ExtResource("1_6okig")]
+
+[node name="Logo" parent="." instance=ExtResource("2_giquc")]
+
+[node name="Galaga-01" parent="." instance=ExtResource("3_wc5jd")]
+position = Vector2(176.208, 16.208)
+scale = Vector2(0.131, 0.131)
+
+[node name="Galaga-02" parent="." instance=ExtResource("3_wc5jd")]
+position = Vector2(304.208, 144.208)
+scale = Vector2(0.131, 0.131)
+
+[node name="Galaga-03" parent="." instance=ExtResource("3_wc5jd")]
+position = Vector2(112.208, 400.208)
+scale = Vector2(0.131, 0.131)
+
+[node name="Galaga-04" parent="." instance=ExtResource("3_wc5jd")]
+position = Vector2(952.208, 264.208)
+scale = Vector2(0.131, 0.131)
+
+[node name="Galaga-05" parent="." instance=ExtResource("3_wc5jd")]
+position = Vector2(1080.21, 392.208)
+scale = Vector2(0.131, 0.131)
+
+[node name="Galaga-06" parent="." instance=ExtResource("3_wc5jd")]
+position = Vector2(888.208, 648.208)
+scale = Vector2(0.131, 0.131)
+
+[node name="Label" type="Label" parent="."]
+offset_top = 56.0
+offset_right = 1152.0
+offset_bottom = 79.0
+theme_type_variation = &"HeaderLarge"
+text = "パーセック"
+horizontal_alignment = 1

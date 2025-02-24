@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://vxhsm7vy5bto"]
+
+[ext_resource type="Texture2D" uid="uid://dxnngddf15sn3" path="res://images/galaga-01.png" id="1_crtga"]
+[ext_resource type="Script" path="res://galaga_01_IfElse.gd" id="2_0kdsc"]
+
+[node name="IfElse-Lab 2" type="Node2D"]
+
+[node name="Galaga-01" type="Sprite2D" parent="."]
+position = Vector2(544, 312)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_crtga")
+script = ExtResource("2_0kdsc")
+health = null
+booleanVar = null

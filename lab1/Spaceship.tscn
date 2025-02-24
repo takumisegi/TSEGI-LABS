@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwms1d6pv36ct"]
+
+[ext_resource type="Texture2D" uid="uid://dxnngddf15sn3" path="res://images/galaga-01.png" id="1_aj5db"]
+
+[node name="Galaga-01" type="Sprite2D"]
+modulate = Color(0.396078, 0.737255, 1, 1)
+position = Vector2(640, 344)
+scale = Vector2(0.51087, 0.51087)
+texture = ExtResource("1_aj5db")

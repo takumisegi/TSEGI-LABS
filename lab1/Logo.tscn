@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx2elam5ejm3b"]
+
+[ext_resource type="Texture2D" uid="uid://ceoa4imcgfcia" path="res://images/Parsec-game-Logo-1920x1080-V01.png" id="1_4nfk0"]
+
+[node name="Logo" type="Node2D"]
+
+[node name="Parsec-game-logo-1920x1080-v01" type="Sprite2D" parent="."]
+position = Vector2(576, 328)
+scale = Vector2(0.603704, 0.603704)
+texture = ExtResource("1_4nfk0")

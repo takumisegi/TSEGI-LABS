@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://coe66y3yd30ne"]
+
+[ext_resource type="Texture2D" uid="uid://gd7l2417mr6w" path="res://images/icon.svg" id="1_02r6b"]
+[ext_resource type="Texture2D" uid="uid://dqv7ggcpuodki" path="res://images/Lab01-MainScene-BG-V01.jpg" id="2_es021"]
+
+[node name="Icon" type="Sprite2D"]
+position = Vector2(102, 107)
+texture = ExtResource("1_02r6b")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Lab01-mainScene-bg-v01" type="Sprite2D" parent="."]
+position = Vector2(476.141, 217)
+scale = Vector2(0.60223, 0.6)
+texture = ExtResource("2_es021")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 802.0
+offset_top = 869.0
+offset_right = 1396.0
+offset_bottom = 1066.0
+text = "パーセック"
