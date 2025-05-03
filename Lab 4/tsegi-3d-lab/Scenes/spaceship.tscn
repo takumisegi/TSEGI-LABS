@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dncctedbker5f"]
+
+[ext_resource type="PackedScene" uid="uid://25htaihg5rl7" path="res://Assets/Corvette_03.fbx" id="1_5ajj3"]
+[ext_resource type="Script" uid="uid://7645ktuvf1ks" path="res://Scripts/spaceship.gd" id="1_qkqkj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08j7m"]
+size = Vector3(29.4705, 8.5675, 12.4053)
+
+[node name="Spaceship - Main" type="CharacterBody3D"]
+script = ExtResource("1_qkqkj")
+
+[node name="Corvette_03" parent="." instance=ExtResource("1_5ajj3")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77454, 3.78375, 0.207945)
+shape = SubResource("BoxShape3D_08j7m")
+
+[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="."]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://clpjssxyxy7rf"]
+
+[ext_resource type="PackedScene" uid="uid://d0i363whwos5a" path="res://Scenes/3d-lab-main.tscn" id="1_a02cp"]
+
+[sub_resource type="Environment" id="Environment_go701"]
+
+[sub_resource type="Curve" id="Curve_5a7ea"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8j60k"]
+curve = SubResource("Curve_5a7ea")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fo5ed"]
+inherit_velocity_ratio = 1.0
+spread = 180.0
+initial_velocity_min = 1.0
+initial_velocity_max = 2.0
+scale_min = 0.1
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_8j60k")
+
+[sub_resource type="BoxMesh" id="BoxMesh_5ukr8"]
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_go701")
+
+[node name="Spaceship" parent="." instance=ExtResource("1_a02cp")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.441803, 0, -0.897112, 0, 1, 0, 0.897112, 0, 0.441803, -25.424, 12.4938, 21.6315)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_fo5ed")
+draw_pass_1 = SubResource("BoxMesh_5ukr8")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3136, -3.09892, 0)
+size = Vector3(189.045, 1, 134.361)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 31.9774, -50.5627)

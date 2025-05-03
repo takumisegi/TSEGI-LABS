@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0i363whwos5a"]
+
+[ext_resource type="PackedScene" uid="uid://25htaihg5rl7" path="res://Assets/Corvette_03.fbx" id="1_08j7m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08j7m"]
+size = Vector3(29.4705, 8.5675, 12.4053)
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="Corvette_03" parent="." instance=ExtResource("1_08j7m")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77454, 3.78375, 0.207945)
+shape = SubResource("BoxShape3D_08j7m")
